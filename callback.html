@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>تسجيل الدخول | Daily Sakina</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>تم تسجيل الدخول</h1>
+<p id="msg">انسخ الكود ده وارجع للإعداد.</p>
+<div class="box"><textarea id="code" readonly></textarea><button id="copy" type="button">نسخ</button></div>
+<script>
+var q=new URLSearchParams(location.search);var c=q.get('code');var e=q.get('error_description')||q.get('error');
+var t=document.getElementById('code');
+if(c){t.value=c;}else{document.getElementById('msg').textContent='مفيش كود في الرابط'+(e?(': '+e):'');}
+document.getElementById('copy').onclick=function(){t.select();try{navigator.clipboard.writeText(t.value);this.textContent='اتنسخ ✓';}catch(x){}};
+</script>
+</main></body></html>
